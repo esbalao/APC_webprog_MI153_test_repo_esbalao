@@ -12,6 +12,12 @@ if(isset($_POST['btn-update']))
  $first_name = $_POST['first_name'];
  $last_name = $_POST['last_name'];
  $city_name = $_POST['city_name'];
+ 
+ $cellphoneNumber = $_POST['cellphoneNumber'];
+ $comment = $_POST['comment'];
+ $emailAddress = $_POST['emailAddress']; 
+ $gender = $_POST['gender'];
+ $nickname = $_POST['nickname'];
  // variables for input data
 
  // sql query for update data into database

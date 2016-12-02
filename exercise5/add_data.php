@@ -57,6 +57,22 @@ if(isset($_POST['btn-save']))
     <td><input type="text" name="city_name" placeholder="City" required /></td>
     </tr>
     <tr>
+
+	<td><input type="text" name="comment" placeholder="Comment" required /></td>
+    </tr>
+    <tr>
+	 <td><input type="text" name="gender" placeholder="Gender" required /></td>
+    </tr>
+    <tr>
+	 <td><input type="text" name="nickname" placeholder="Nickname" required /></td>
+    </tr>
+    <tr>
+	 <td><input type="text" name="cellphoneNumber" placeholder="Cellphone Number" required /></td>
+    </tr>
+    <tr>
+	 <td><input type="text" name="emailAddress" placeholder="Email Address" required /></td>
+    </tr>
+    <tr>
     <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
     </tr>
     </table>
