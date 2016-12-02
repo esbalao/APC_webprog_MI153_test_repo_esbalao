@@ -51,6 +51,11 @@ function delete_id(id)
     <th>First Name</th>
     <th>Last Name</th>
     <th>City Name</th>
+	<th>Comment</th>
+	<th>Gender</th>
+	<th>NickName</th>
+	<th>Cellphone Number</th>
+	<th>Email Address</th>
     <th colspan="2">Operations</th>
     </tr>
     <?php
@@ -63,6 +68,11 @@ function delete_id(id)
         <td><?php echo $row[1]; ?></td>
         <td><?php echo $row[2]; ?></td>
         <td><?php echo $row[3]; ?></td>
+		<td><?php echo $row[4]; ?></td>	
+		<td><?php echo $row[5]; ?></td>
+	    <td><?php echo $row[6]; ?></td>
+	    <td><?php echo $row[7]; ?></td>
+	    <td><?php echo $row[8]; ?></td>
   <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
         <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
         </tr>

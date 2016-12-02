@@ -76,7 +76,15 @@ if(isset($_POST['btn-cancel']))
     <td><input type="text" name="last_name" placeholder="Last Name" value="<?php echo $fetched_row['last_name']; ?>" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="city_name" placeholder="City" value="<?php echo $fetched_row['user_city']; ?>" required /></td>
+    <td><input type="text" name="nickname" placeholder="Nickname" value="<?php echo $fetched_row['nickname']; ?>" required /></td>
+    </tr>
+	 <td><input type="text" name="gender" placeholder="Gender" value="<?php echo $fetched_row['gender']; ?>" required /></td>
+    </tr>
+	 <td><input type="text" name="comment" placeholder="Comment" value="<?php echo $fetched_row['comment']; ?>" required /></td>
+    </tr>
+	 <td><input type="text" name="emailAddress" placeholder="Emal Adress" value="<?php echo $fetched_row['emailAddress']; ?>" required /></td>
+    </tr>
+	 <td><input type="number_format" name="cellphoneNumber" placeholder="Cellphone Number" value="<?php echo $fetched_row['cellphoneNumber']; ?>" required /></td>
     </tr>
     <tr>
     <td>
