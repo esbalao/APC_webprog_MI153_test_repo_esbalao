@@ -51,11 +51,12 @@ function delete_id(id)
     <th>First Name</th>
     <th>Last Name</th>
     <th>City Name</th>
-	<th>Comment</th>
+	<th>Nickname</th>
 	<th>Gender</th>
-	<th>NickName</th>
-	<th>Cellphone Number</th>
 	<th>Email Address</th>
+	<th>Comment</th>
+	<th>Cellphone Number</th>
+
     <th colspan="2">Operations</th>
     </tr>
     <?php

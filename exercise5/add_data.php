@@ -6,20 +6,18 @@ if(isset($_POST['btn-save']))
  // variables for input data
  $first_name = $_POST['first_name'];
  $last_name = $_POST['last_name'];
- $city_name = $_POST['city_name'];
- 
- $cellphoneNumber = $_POST['cellphoneNumber'];
- $comment = $_POST['comment'];
- $emailAddress = $_POST['emailAddress']; 
- $gender = $_POST['gender'];
+ $city_name = $_POST['city_name'];  
  $nickname = $_POST['nickname'];
+ $gender = $_POST['gender'];
+ $emailAddress = $_POST['emailAddress']; 
+ $comment = $_POST['comment'];
+ $cellphoneNumber = $_POST['cellphoneNumber'];
 
- 
  // variables for input data
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
+        $sql_query = "INSERT INTO users(first_name,last_name,user_city,nickname,gender,emailAddress,comment,cellphoneNumber) VALUES('$first_name','$last_name','$city_name','$nickname','$gender','$emailAddress','$comment','$cellphoneNumber')";
  mysqli_query($con, $sql_query);
         
         // sql query for inserting data into database
@@ -49,7 +47,7 @@ if(isset($_POST['btn-save']))
     </tr>
     <tr>
     <td><input type="text" name="first_name" placeholder="First Name" required /></td>
-    </tr>
+    </tr
     <tr>
     <td><input type="text" name="last_name" placeholder="Last Name" required /></td>
     </tr>
