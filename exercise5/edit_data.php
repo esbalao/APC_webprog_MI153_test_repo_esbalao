@@ -3,30 +3,26 @@ include_once 'dbconfig.php';
 if(isset($_GET['edit_id']))
 {
  $sql_query="SELECT * FROM users WHERE user_id=".$_GET['edit_id'];
- $result_set=mysqli_query($con, $sql_query);
- $fetched_row=mysqli_fetch_array($result_set);
+ $result_set=mysql_query($sql_query);
+ $fetched_row=mysql_fetch_array($result_set);
 }
 if(isset($_POST['btn-update']))
 {
  // variables for input data
- $first_name = $_POST['first_name'];
- $last_name = $_POST['last_name'];
- $city_name = $_POST['city_name'];
- 
- $cellphoneNumber = $_POST['cellphoneNumber'];
- $comment = $_POST['comment'];
- $emailAddress = $_POST['emailAddress']; 
- $gender = $_POST['gender'];
- $nickname = $_POST['nickname'];
+$name = $_POST['name'];
+$nickname = $POST['nickname']
+$gender = $_POST['gender'];
+$email = $_POST['email'];
+$comment = $_POST['comment'];
+$cellphone = $_POST['cellphone'];
  // variables for input data
 
  // sql query for update data into database
- $sql_query = "UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name' WHERE user_id=".$_GET['edit_id',nickname='$nickname',gender='$nickname',emailadress='$emailAddress',comment='$comment',cellphonenum
- ber='$cellphoneNumber'];
+ $sql_query = "UPDATE users SET name='$name',nickname='$nickname',gender='$gender',email='$email',comment='$comment',cellphone='$cellphone', WHERE user_id=".$_GET['edit_id'];
  // sql query for update data into database
  
  // sql query execution function
- if(mysqli_query($con, $sql_query))
+ if(mysql_query($sql_query))
  {
   ?>
   <script type="text/javascript">
@@ -70,22 +66,23 @@ if(isset($_POST['btn-cancel']))
  <div id="content">
     <form method="post">
     <table align="center">
-    <tr>
-    <td><input type="text" name="first_name" placeholder="First Name" value="<?php echo $fetched_row['first_name']; ?>" required /></td>
+   <tr>
+    <td><input type="text" name="name" placeholder="Name" value="<?php echo $fetched_row['name']; ?>" required /></td>
     </tr>
-    <tr>
-    <td><input type="text" name="last_name" placeholder="Last Name" value="<?php echo $fetched_row['last_name']; ?>" required /></td>
+	 <tr>
+    <td><input type="text" name="nickname" placeholder="First Name" value="<?php echo $fetched_row['nickname']; ?>" required /></td>
     </tr>
-    <tr>
-    <td><input type="text" name="nickname" placeholder="Nickname" value="<?php echo $fetched_row['nickname']; ?>" required /></td>
+	 <tr>
+    <td><input type="text" name="gender" placeholder="Gender" value="<?php echo $fetched_row['gender']; ?>" required /></td>
     </tr>
-	 <td><input type="text" name="gender" placeholder="Gender" value="<?php echo $fetched_row['gender']; ?>" required /></td>
+	 <tr>
+    <td><input type="text" name="email" placeholder="Email" value="<?php echo $fetched_row['email']; ?>" required /></td>
     </tr>
-	 <td><input type="text" name="comment" placeholder="Comment" value="<?php echo $fetched_row['comment']; ?>" required /></td>
+	 <tr>
+    <td><input type="text" name="comment" placeholder="Comment" value="<?php echo $fetched_row['comment']; ?>" required /></td>
     </tr>
-	 <td><input type="text" name="emailAddress" placeholder="Emal Adress" value="<?php echo $fetched_row['emailAddress']; ?>" required /></td>
-    </tr>
-	 <td><input type="number_format" name="cellphoneNumber" placeholder="Cellphone Number" value="<?php echo $fetched_row['cellphoneNumber']; ?>" required /></td>
+	 <tr>
+    <td><input type="text" name="cellphone" placeholder="cellphone" value="<?php echo $fetched_row['cellphone']; ?>" required /></td>
     </tr>
     <tr>
     <td>

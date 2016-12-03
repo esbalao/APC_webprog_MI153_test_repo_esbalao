@@ -4,21 +4,19 @@ include_once 'dbconfig.php';
 if(isset($_POST['btn-save']))
 {
  // variables for input data
- $first_name = $_POST['first_name'];
- $last_name = $_POST['last_name'];
- $city_name = $_POST['city_name'];  
- $nickname = $_POST['nickname'];
- $gender = $_POST['gender'];
- $emailAddress = $_POST['emailAddress']; 
- $comment = $_POST['comment'];
- $cellphoneNumber = $_POST['cellphoneNumber'];
-
+$name = $_POST['name'];
+$nickname = $POST['nickname']
+$gender = $_POST['gender'];
+$email = $_POST['email'];
+$comment = $_POST['comment'];
+$cellphone = $_POST['cellphone'];
+  
  // variables for input data
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO users(first_name,last_name,user_city,nickname,gender,emailAddress,comment,cellphoneNumber) VALUES('$first_name','$last_name','$city_name','$nickname','$gender','$emailAddress','$comment','$cellphoneNumber')";
- mysqli_query($con, $sql_query);
+        $sql_query = "INSERT INTO users(name,nickname,gender,email,comment,cellphone) VALUES('$name','$nickname','$gender','$email','$comment','$cellphone',)";
+ mysql_query($sql_query);
         
         // sql query for inserting data into database
  
@@ -46,31 +44,23 @@ if(isset($_POST['btn-save']))
     <td align="center"><a href="index.php">back to main page</a></td>
     </tr>
     <tr>
-    <td><input type="text" name="first_name" placeholder="First Name" required /></td>
-    </tr
-    <tr>
-    <td><input type="text" name="last_name" placeholder="Last Name" required /></td>
+    <td><input type="text" name="name" placeholder="First Name" required /></td>
     </tr>
-    <tr>
-    <td><input type="text" name="city_name" placeholder="City" required /></td>
+	<tr>
+    <td><input type="text" name="nickname" placeholder=" NickName" required /></td>
     </tr>
-    <tr>
-
-	<td><input type="text" name="comment" placeholder="Comment" required /></td>
+	<tr>
+    <td><input type="text" name="gender" placeholder="Gender" required /></td>
     </tr>
-    <tr>
-	 <td><input type="text" name="gender" placeholder="Gender" required /></td>
+	<tr>
+    <td><input type="text" name="email" placeholder="Email" required /></td>
     </tr>
-    <tr>
-	 <td><input type="text" name="nickname" placeholder="Nickname" required /></td>
+	<tr>
+    <td><input type="text" name="comment" placeholder="Comment" required /></td>
     </tr>
-    <tr>
-	 <td><input type="number_format" name="cellphoneNumber" placeholder="Cellphone Number" required /></td>
+	<tr>
+    <td><input type="number_format" name="cellphone" placeholder="First Name" required /></td>
     </tr>
-    <tr>
-	 <td><input type="text" name="emailAddress" placeholder="Email Address" required /></td>
-    </tr>
-    <tr>
     <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
     </tr>
     </table>
