@@ -6,7 +6,6 @@
 <body>
   <div id="container">
     <div id = "header">
-    <h1> My website </h1>
     </div>
      <div id ="content">
         <div id = "nav">
