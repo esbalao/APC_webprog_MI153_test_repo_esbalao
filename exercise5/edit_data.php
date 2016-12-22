@@ -3,26 +3,27 @@ include_once 'dbconfig.php';
 if(isset($_GET['edit_id']))
 {
  $sql_query="SELECT * FROM users WHERE user_id=".$_GET['edit_id'];
- $result_set=mysql_query($sql_query);
- $fetched_row=mysql_fetch_array($result_set);
+ $result_set=mysqli_query($con , $sql_query);
+ $fetched_row=mysqli_fetch_array($result_set);
 }
 if(isset($_POST['btn-update']))
 {
  // variables for input data
-$name = $_POST['name'];
-$nickname = $POST['nickname']
-$gender = $_POST['gender'];
-$email = $_POST['email'];
-$comment = $_POST['comment'];
-$cellphone = $_POST['cellphone'];
+ $name = $_POST['name'];
+ $nickname = $_POST['nickname'];
+ $gender = $_POST['gender'];
+ $email = $_POST['email'];
+ $comment = $_POST['comment'];
+ $cellphone = $_POST['cellphone'];
  // variables for input data
 
  // sql query for update data into database
- $sql_query = "UPDATE users SET name='$name',nickname='$nickname',gender='$gender',email='$email',comment='$comment',cellphone='$cellphone', WHERE user_id=".$_GET['edit_id'];
+ $sql_query = "UPDATE users SET name='$name', nickname='$nickname', gender='$gender', email='$email',
+              comment='$comment', cellphone='$cellphone' WHERE user_id=".$_GET['edit_id'];
  // sql query for update data into database
  
  // sql query execution function
- if(mysql_query($sql_query))
+ if(mysqli_query($con, $sql_query))
  {
   ?>
   <script type="text/javascript">
@@ -66,23 +67,25 @@ if(isset($_POST['btn-cancel']))
  <div id="content">
     <form method="post">
     <table align="center">
-   <tr>
-    <td><input type="text" name="name" placeholder="Name" value="<?php echo $fetched_row['name']; ?>" required /></td>
+    <tr>
+    <td><input type="text" name="name" placeholder="Full Name" value="<?php echo $fetched_row['name']; ?>" required /></td>
     </tr>
-	 <tr>
-    <td><input type="text" name="nickname" placeholder="First Name" value="<?php echo $fetched_row['nickname']; ?>" required /></td>
+    <tr>
+    <td><input type="text" name="nickname" placeholder="Nick Name" value="<?php echo $fetched_row['nickname']; ?>" required /></td>
     </tr>
-	 <tr>
+    <tr>
     <td><input type="text" name="gender" placeholder="Gender" value="<?php echo $fetched_row['gender']; ?>" required /></td>
     </tr>
-	 <tr>
+    <tr>
+    <td>
+    <tr>
     <td><input type="text" name="email" placeholder="Email" value="<?php echo $fetched_row['email']; ?>" required /></td>
     </tr>
-	 <tr>
+    <tr>
     <td><input type="text" name="comment" placeholder="Comment" value="<?php echo $fetched_row['comment']; ?>" required /></td>
     </tr>
-	 <tr>
-    <td><input type="text" name="cellphone" placeholder="cellphone" value="<?php echo $fetched_row['cellphone']; ?>" required /></td>
+    <tr>
+    <td><input type="text" name="cellphone" placeholder="Cellphone" value="<?php echo $fetched_row['cellphone']; ?>" required /></td>
     </tr>
     <tr>
     <td>

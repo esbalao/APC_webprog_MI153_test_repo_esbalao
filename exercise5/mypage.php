@@ -20,7 +20,6 @@
          <li><a href="youtube.com"> Youtube</a> </li>
          <li><a href="github.com"> Github</a> </li>
          <li><a href="w3schools.com"> W3Schools</a> </li>
-		 <li><a href="index.php"> CRUD LINK</a> </li>
          
          <ul>
         </div>

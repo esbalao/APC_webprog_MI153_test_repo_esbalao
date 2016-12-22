@@ -4,19 +4,18 @@ include_once 'dbconfig.php';
 if(isset($_POST['btn-save']))
 {
  // variables for input data
-$name = $_POST['name'];
-$nickname = $POST['nickname']
-$gender = $_POST['gender'];
-$email = $_POST['email'];
-$comment = $_POST['comment'];
-$cellphone = $_POST['cellphone'];
-  
+ $name = $_POST['name'];
+ $nickname = $_POST['nickname'];
+ $gender = $_POST['gender'];
+ $email = $_POST['email'];
+ $comment = $_POST['comment'];
+ $cellphone = $_POST['cellphone'];
  // variables for input data
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO users(name,nickname,gender,email,comment,cellphone) VALUES('$name','$nickname','$gender','$email','$comment','$cellphone',)";
- mysql_query($sql_query);
+        $sql_query = "INSERT INTO users(name,nickname,gender,email,comment,cellphone) VALUES('$name','$nickname','$gender','$email','$comment','$cellphone')";
+ mysqli_query($con, $sql_query);
         
         // sql query for inserting data into database
  
@@ -42,25 +41,36 @@ $cellphone = $_POST['cellphone'];
     <table align="center">
     <tr>
     <td align="center"><a href="index.php">back to main page</a></td>
+  
     </tr>
     <tr>
-    <td><input type="text" name="name" placeholder="First Name" required /></td>
+    <td><input type="text" name="name" placeholder="FullName" required /></td>
     </tr>
-	<tr>
-    <td><input type="text" name="nickname" placeholder=" NickName" required /></td>
     </tr>
-	<tr>
+    <tr>
+    <td><input type="text" name="nickname" placeholder="Nickname" required /></td>
+    </tr>
+    <tr>
+   </tr>
+    <tr>
     <td><input type="text" name="gender" placeholder="Gender" required /></td>
     </tr>
-	<tr>
+    <tr>
+     </tr>
+    <tr>
     <td><input type="text" name="email" placeholder="Email" required /></td>
     </tr>
-	<tr>
+    <tr>
+     </tr>
+    <tr>
     <td><input type="text" name="comment" placeholder="Comment" required /></td>
     </tr>
-	<tr>
-    <td><input type="number_format" name="cellphone" placeholder="First Name" required /></td>
+    <tr>
+     </tr>
+    <tr>
+    <td><input type="text" name="cellphone" placeholder="Cellphone" required /></td>
     </tr>
+    <tr>
     <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
     </tr>
     </table>
